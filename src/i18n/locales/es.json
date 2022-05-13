@@ -1,0 +1,14 @@
+{
+  "info" : {
+    "exampleOne": "Este es un ejemplo de texto uno en Español",
+    "exampleTwo": "Este es un ejemplo de texto dos en Español"
+  },
+  "buttons": {
+    "en": "Ingles",
+    "es": "Español",
+    "goHomePage": "Ir a pagina Home"
+  },
+  "title":{
+    "languageSelector": "Selector de idioma"
+  }
+}
