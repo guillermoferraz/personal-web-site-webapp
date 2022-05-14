@@ -6,8 +6,6 @@ import translationEN from './locales/en.json';
 import { changeLanguage } from '../config/changeLanguage';
 
 // the translations
-console.log("test:", changeLanguage())
-
 i18n
   .use(detector)
   .use(initReactI18next) // passes i18n down to react-i18next
