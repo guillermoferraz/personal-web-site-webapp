@@ -12,17 +12,17 @@ i18n
   .init({
     resources: {
       en: {
-				translation: translationEN,
-			},
-			es: {
-				translation: translationES,
-			},
-		},
+        translation: translationEN,
+      },
+      es: {
+        translation: translationES,
+      },
+    },
     interpolation: {
       escapeValue: false // react already safes from xss
     }
   });
-  i18n.changeLanguage(changeLanguage())
+i18n.changeLanguage(changeLanguage())
 
 
 export default i18n
