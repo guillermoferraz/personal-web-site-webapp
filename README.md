@@ -1,3 +1,18 @@
+Project skeleton made by NextJs and TypeScript. Predefined basic architecture plus Eslint, internationalization and redux.
+
+## Facility:
+yarn install
+
+## Production Execution:
+yarn start
+
+## Development Execution:
+yarn run dev
+
+## Execution of Eslint:
+yarn line
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
