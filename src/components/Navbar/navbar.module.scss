@@ -1,0 +1,58 @@
+.container {
+  height: 7.5vh;
+  position: relative;
+  display: flex;
+}
+.containerLanguages{
+  width: 150;
+  height: min-content;
+  position: absolute;
+  top: 7.5vh;
+  right: 0;
+}
+.languageItem{
+  width: max-content;
+  height: 100%;
+  margin-inline-start: auto;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.flagSelected{
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: -5px
+}
+.flagSelected>span {
+  border-radius: 50%;
+}
+.arrow{
+  margin-top: -10px;
+  margin-left: 10px;
+  color: gray
+}
+.backWall{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  right:0;
+  background-color: transparent;
+  z-index: 1;
+}
+.containerSwitch{
+  display: flex;
+  align-items: center;
+  margin-left: 85%
+}
+.iconSun{
+  color: rgb(202, 208, 27)
+}
+.iconMoon{
+  color: rgb(34, 32, 164)
+}

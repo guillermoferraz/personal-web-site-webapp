@@ -1,0 +1,27 @@
+.container{
+  width: max-content;
+  height: max-content;
+  border-radius: 6px;
+  background-color: aliceblue;
+  box-shadow: 0px 3px 18px rgba(0,0,0,0.7);
+  -moz-box-shadow: 0px 3px 18px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0px 3px 18px rgba(0,0,0,0.7);
+  position: relative;
+  z-index: 2;
+}
+.flags{
+  border-bottom: 1px solid #d0c9c9;
+  background-color: aliceblue;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  &:hover{
+    background-color: rgb(184, 235, 255);
+    cursor: pointer;
+  }
+}
+.flags>p{
+  margin: 0px 0px 0px 10px;
+  padding: 0;
+}

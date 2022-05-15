@@ -1,7 +1,7 @@
-import Start from './Start'
+import Home from './Home'
 const Document = () => {
   return (
-   <Start/>
+   <Home/>
   )
 }
 export default Document
