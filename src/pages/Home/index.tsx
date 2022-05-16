@@ -2,13 +2,17 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../hooks'
-import { RootState } from '../../redux'
 import Image from 'next/image'
 import '../../i18n/i18n'
 
+/*Components */
+import Banner from '../../components/Banner'
+
 /* Store */
 import exampleSlice, { getExample, postExample } from '../../redux/example'
+import { getTheme } from '../../redux/theme'
+import { RootState } from '../../redux'
+import { useAppDispatch } from '../../hooks'
 
 /* Constants */
 import { constantsTypes } from '../../constants/constants'
@@ -16,6 +20,7 @@ import { ExampleDataTypes } from '../../redux/types/exampleTypes'
 
 /* Styles */
 import styles from '../../styles/home.module.scss'
+import { themeStyles } from '../../styles/theme'
 
 const Start = () => {
   const { t } = useTranslation()
@@ -23,10 +28,15 @@ const Start = () => {
   const router = useRouter()
   const { exampleData, examplePostData } = useSelector((state: RootState) => state.exampleState)
   const { setCleanExampleData } = exampleSlice.actions
+  const { dark } = useSelector((state: RootState) => state.themeState)
 
   useEffect(() => {
     dispatch(getExample())
   }, [dispatch])
+
+  useEffect(() => {(
+    dispatch(getTheme())
+  )}, [dispatch, dark])
 
   const handlePostData = (indicator: string) => {
     dispatch(postExample(indicator))
@@ -37,13 +47,13 @@ const Start = () => {
 
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}>
+      <Banner/>
       <h1>Redux, TypeScript and i18n</h1>
       <button onClick={() => router.push('/Contact')}>Contact</button>
       <section>
         <h5>{t('title.languageSelector')}</h5>
         <h1>Skeleton App</h1>
-
         <div style={{ display: 'flex' }}>
           <div style={{ margin: 25, padding: 25, border: '1px solid red', width: 'max-content' }}>
             {exampleData && exampleData === constantsTypes.PENDING && <><br /><p>{t('loading.pending')}</p><br /></>}

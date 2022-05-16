@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  font-weight: 900;
+  margin-left: 10px;
+  height: 100%;
+  cursor: pointer;
+  font-family: 'Syne Mono', monospace;
+  &>:nth-child(1){
+    margin-right: 5px;
+  }
+  &>:nth-child(2){
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &>:nth-child(4){
+    margin-left: 5px;
+  }
+}

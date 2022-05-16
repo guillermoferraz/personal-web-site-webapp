@@ -21,19 +21,19 @@ const LanguageSelector = () => {
       <div className={styles.container}>
         <div className={styles.flags} onClick={() => handleLanguage('es')}>
           <Image width={30} height={30} src={Sp} alt='' />
-          <p>Spanish</p>
+          <p>{t('buttons.es')}</p>
         </div>
         <div className={styles.flags} onClick={() => handleLanguage('en')} >
           <Image width={30} height={30} src={Uk} alt='' />
-          <p>English</p>
+          <p>{t('buttons.en')}</p>
         </div>
-        <div className={styles.flags}>
+        <div className={styles.flags} onClick={() => handleLanguage('fr')}>
           <Image width={30} height={30} src={Fr} alt='' />
-          <p>French</p>
+          <p>{t('buttons.fr')}</p>
         </div>
-        <div className={styles.flags}>
+        <div className={styles.flags} onClick={() => handleLanguage('br')}>
           <Image width={30} height={30} src={Br} alt='' />
-          <p>Portuguese</p>
+          <p>{t('buttons.br')}</p>
         </div>
       </div>
   )

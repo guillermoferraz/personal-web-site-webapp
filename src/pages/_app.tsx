@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {renderChild ?
           <div style={{ position: 'relative' }}>
             <Navbar />
-            <div style={{minHeight: '85vh', maxHeight: '85vh', overflowY: 'auto' }}>
+            <div style={{minHeight: '85vh', maxHeight: '85vh', overflowY: 'auto'}}>
               <Component {...pageProps} />
             </div>
             <Footer />

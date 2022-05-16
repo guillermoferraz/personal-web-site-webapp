@@ -1,0 +1,24 @@
+{
+  "info" : {
+    "exampleOne": "Ceci est un exemple de texte un en français",
+    "exampleTwo": "Ceci est un exemple de texte deux en français",
+    "noData": "Il n'y a pas de données"
+  },
+  "buttons": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "br": "Portugais",
+    "goHomePage": "Aller à la page d'accueil",
+    "exampleOne": "Exemple 1",
+    "exampleTwo": "Exemple 2",
+    "exampleThree": "Exemple 3",
+    "cleanState": "Effacer le statut"
+  },
+  "title":{
+    "languageSelector": "Sélecteur de langue"
+  },
+  "loading": {
+    "pending": "Mise en charge ..."
+  }
+}

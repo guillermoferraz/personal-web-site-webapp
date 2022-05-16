@@ -3,6 +3,8 @@ import { initReactI18next } from "react-i18next";
 import detector from "i18next-browser-languagedetector";
 import translationES from './locales/es.json';
 import translationEN from './locales/en.json';
+import translationFR from './locales/fr.json';
+import translationBR from './locales/br.json';
 import { changeLanguage } from '../config/changeLanguage';
 
 // the translations
@@ -16,6 +18,12 @@ i18n
       },
       es: {
         translation: translationES,
+      },
+      fr: {
+        translation: translationFR,
+      },
+      br: {
+        translation: translationBR,
       },
     },
     interpolation: {

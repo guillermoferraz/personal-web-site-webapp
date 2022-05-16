@@ -1,0 +1,24 @@
+{
+  "info" : {
+    "exampleOne": "Este é um exemplo de texto um em português",
+    "exampleTwo": "Este é um exemplo de texto dois em português",
+    "noData": "Não há dados"
+  },
+  "buttons": {
+    "en": "Inglês",
+    "es": "Espanhol",
+    "fr": "Francês",
+    "br": "Português",
+    "goHomePage": "Vá para a página inicial",
+    "exampleOne": "Exemplo 1",
+    "exampleTwo": "Exemplo 2",
+    "exampleThree": "Exemplo 3",
+    "cleanState": "Estado limpo"
+  },
+  "title":{
+    "languageSelector": "Seletor de idioma"
+  },
+  "loading": {
+    "pending": "Esperando resposta ..."
+  }
+}
