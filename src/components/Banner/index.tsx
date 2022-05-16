@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import MatrixEffect from '../MatrixEffect'
 import styles from './banner.module.scss'
 
 const Banner = () => {
@@ -88,12 +89,17 @@ const Banner = () => {
   }
 
   return (
+    <>
+    <div className={styles.containerMatrix}>
+      <MatrixEffect/> 
+    </div>
     <div className={styles.container} onMouseEnter={() => handleEntryMouse()} onMouseLeave={() => handleLeaveMouse()}>
       <div className={styles.subContainer}>
         <p className={styles.text}>{returnText()}</p>
         <p className={styles.text}>{comment}</p>
       </div>
     </div>
+    </>
   )
 }
 export default Banner

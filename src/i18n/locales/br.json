@@ -2,7 +2,9 @@
   "info" : {
     "exampleOne": "Este é um exemplo de texto um em português",
     "exampleTwo": "Este é um exemplo de texto dois em português",
-    "noData": "Não há dados"
+    "noData": "Não há dados",
+    "text_1": "Olá !. Meu nome é Guilhermo Ferraz. Moro no Uruguai e sou desenvolvedor FullStack. Desde pequena minha paixão são os computadores. Gosto de estar constantemente aprendendo e me atualizando porque realmente amo meu trabalho. Convido você a conhecer mais sobre meu perfil, conhecimentos e habilidades.",
+    "text_2": "Se você também é um desenvolvedor de software, em breve estarei enviando material sobre TypeScript, React, Redux, NextJs, Node, etc. e exemplos de código para compartilhar que podem ser úteis para você."
   },
   "buttons": {
     "en": "Inglês",

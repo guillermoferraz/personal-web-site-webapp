@@ -1,2 +1,16 @@
-.container {
+.content {
+  min-height: 55vh;
+  margin-top: -32px;
+  display: flex;
+  padding: 15px;
+}
+.textContainer{
+  margin: auto;
+  margin-top: 26px;
+  padding: 20px;
+  width: 80%;
+  font-size: 16px;
+  height: max-content;
+  border-radius: 8px;
+  font-weight: 400;  
 }

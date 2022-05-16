@@ -1,0 +1,31 @@
+.container{
+  width: 200px;
+  min-height: 50vh;
+}
+
+.containerPhoto {
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  & > span {
+    width: 130px !important;
+    margin: auto;
+    border-radius: 10%;
+    border: 2px solid rgb(21, 155, 9) !important;
+    cursor: pointer;
+    & > img {
+      transition: 3.5s ease !important;
+      -moz-transition: 3.5s ease !important;
+      -webkit-transition: 3.5s ease !important;
+    }
+    & > img:hover {
+      transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -webkit-transform: scale(1.5);
+      -o-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+    }
+  }
+}

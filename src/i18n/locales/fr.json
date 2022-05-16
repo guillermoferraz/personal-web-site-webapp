@@ -2,7 +2,9 @@
   "info" : {
     "exampleOne": "Ceci est un exemple de texte un en français",
     "exampleTwo": "Ceci est un exemple de texte deux en français",
-    "noData": "Il n'y a pas de données"
+    "noData": "Il n'y a pas de données",
+    "text_1": "Salut !. Je m'appelle Guillermo Ferraz. Je vis en Uruguay et je suis développeur FullStack. Depuis tout petit, ma passion est l'informatique. J'aime constamment apprendre et me mettre à jour parce que j'aime vraiment mon travail. Je vous invite à en savoir plus sur mon profil, mes connaissances et mes compétences.",
+    "text_2": "Si vous êtes également développeur de logiciels, je téléchargerai bientôt du matériel sur TypeScript, React, Redux, NextJs, Node, etc. et des exemples de code à partager qui pourraient vous être utiles."
   },
   "buttons": {
     "en": "Anglais",

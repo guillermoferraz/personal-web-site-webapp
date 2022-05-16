@@ -2,7 +2,9 @@
   "info" : {
     "exampleOne": "Este es un ejemplo de texto uno en Español",
     "exampleTwo": "Este es un ejemplo de texto dos en Español",
-    "noData": "No hay datos"
+    "noData": "No hay datos",
+    "text_1": "Hola !. Mi nombre es Guillermo Ferraz. Vivo en Uruguay y soy desarrollador FullStack. Desde pequeño mi pasión ha sido la informática. Me gusta estar en constante aprendizaje y actualización ya que realmente me encanta mi trabajo. Te invito a conocer mas acerca de mi perfil, conocimientos y habilidades.",
+    "text_2": "Si también eres desarrollador de software, próximamente estaré subiendo material acerca de TypeScript, React, Redux, NextJs, Node ,etc y ejemplos de código para compartir que quizás te podrían ser de utilidad."
   },
   "buttons": {
     "en": "Ingles",
