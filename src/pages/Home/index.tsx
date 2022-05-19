@@ -10,8 +10,8 @@ import MenuLeft from '../../components/MenuLeft'
 import Links from '../../components/Links'
 
 /* Store */
-import { getTheme } from '../../redux/theme'
-import { RootState } from '../../redux'
+import { getTheme } from '../../store/theme'
+import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 
 
@@ -25,15 +25,11 @@ const Start = () => {
   const router = useRouter()
   const { dark } = useSelector((state: RootState) => state.themeState)
 
-
   useEffect(() => {
     (
       dispatch(getTheme())
     )
   }, [dispatch, dark])
-
-
-
 
   return (
     <div className={styles.container} style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}>

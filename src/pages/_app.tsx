@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { Provider } from 'react-redux'
-import store from '../redux'
+import store from '../store'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import '../styles/globals.scss'

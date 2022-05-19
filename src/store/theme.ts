@@ -24,16 +24,16 @@ export const changeTheme = createAsyncThunk('changeTheme', async (theme: string)
 const themeSlice = createSlice({
   name: 'themeState',
   initialState: {
-   themeData: ConstantThemes.LIGTH,
+   themeData: ConstantThemes.DARK,
    responseChangeTheme: '',
-   dark: false
+   dark: true
   },
   reducers:{
   },
   extraReducers: builder => {
     builder.addCase(getTheme.fulfilled, (state, { payload }) => {
-      state.themeData = payload || ConstantThemes.LIGTH
-      state.dark = payload === ConstantThemes.DARK ? true : false
+      state.themeData = payload || ConstantThemes.DARK
+      state.dark = payload === ConstantThemes.LIGTH ? false : true
     })
     .addCase(changeTheme.fulfilled, (state, { payload }) => {
       state.responseChangeTheme = payload || ''

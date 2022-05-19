@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { useTranslation } from 'react-i18next'
+import { useRouter } from 'next/router'
 
 /* Redux data */
-import { getTheme } from '../../redux/theme'
-import { RootState } from '../../redux'
+import { getTheme } from '../../store/theme'
+import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 
 /* Types styles */
@@ -12,36 +14,46 @@ import { StylesTypes } from '../../styles/StylesTypes'
 /* Styles */
 import { themeStyles } from '../../styles/theme'
 import { makeStyles } from '@mui/styles'
+
+import '../../i18n/i18n'
+
 const Links = () => {
   const dispatch = useAppDispatch()
+  const router = useRouter()
+  const { t }  = useTranslation()
   const { dark } = useSelector((state: RootState) => state.themeState)
-  const classes = styles()
+  const classes = styles({ dark: dark })
 
   useEffect(() => {
     dispatch(getTheme())
-  },[dispatch])
+    classes
+  },[classes, dispatch])
+
 
   return (
     <div 
       className={classes.container}
+      style={{ color: dark ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }}
       >
-      <div className={classes.containerItem}>
-        <p className={classes.item}>Acerca de mi</p>
+      <div 
+        id='about-me-btn' className={classes.containerItem}
+        onClick={() => router.push('/AboutMe')}
+        >
+        <p className={classes.item}>
+            {t('links.aboutMe')}
+          </p>
       </div>
-      <div className={classes.containerItem}>
-        <p className={classes.item}>contacto</p>
+      <div id='contact-btn' className={classes.containerItem}  onClick={() => router.push('/Contact')}>
+        <p className={classes.item}>{t('links.contact')}</p>
       </div>
-      <div className={classes.containerItem}>
-        <p className={classes.item}>Blog</p>
+      <div id='blog-btn' className={classes.containerItem}  onClick={() => router.push('/Blog')}>
+        <p className={classes.item}>{t('links.blog')}</p>
       </div>
-      <div className={classes.containerItem}>
-        <p className={classes.item}>Mis Habilidades</p>
+      <div id='portfolio-btn' className={classes.containerItem}  onClick={() => router.push('/Portfolio')}>
+        <p className={classes.item}>{t('links.portfolio')}</p>
       </div>
-      <div className={classes.containerItem}>
-        <p className={classes.item}>Porfolio</p>
-      </div>
-      <div className={classes.containerItem}>
-        <p className={classes.item}>CV</p>
+      <div id='cv-btn' className={classes.containerItem}  onClick={() => router.push('/Cv')}>
+        <p className={classes.item}>{t('links.CV')}</p>
       </div>
     </div>
   )
@@ -60,12 +72,13 @@ const styles = makeStyles({
     textAlign: 'center',
     fontWeight: 500,
     '&:hover':{
-      borderBottom: `1px solid ${themeStyles.lineDark}`,
-      borderTop: `1px solid ${themeStyles.lineDark}`,
       margin: 8,
       padding: 13,
       cursor: 'pointer',
-      opacity: .70
+      opacity: .70,
+      borderTop: `1px solid ${themeStyles.hoverTextLight}`,
+      borderBottom: `1px solid ${themeStyles.hoverTextLight}`,
+      color: themeStyles.hoverTextLight
     }
   },
   item: {

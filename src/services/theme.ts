@@ -1,5 +1,5 @@
-import { ConstantThemes } from "../redux/types/themeTypes";
-import { ConstantsServerResponse } from "../redux/types/serverResponseTypes";
+import { ConstantThemes } from "../store/types/themeTypes";
+import { ConstantsServerResponse } from "../store/types/serverResponseTypes";
 const Theme = { 
   getTheme: () => {
     const theme = localStorage.getItem('theme');

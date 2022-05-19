@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { RootState } from '../../redux'
+import { RootState } from '../../store'
 import Image from 'next/image'
 
 /* Styles */

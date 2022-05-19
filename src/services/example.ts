@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ExampleDataTypes } from "../redux/types/exampleTypes"
+import { ExampleDataTypes } from "../store/types/exampleTypes"
 const Example = {
   getExample: () => {
     const response: ExampleDataTypes | any = {

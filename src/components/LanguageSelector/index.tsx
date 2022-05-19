@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../redux'
+import { RootState } from '../../store'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 
 /* Flags */
@@ -16,7 +17,9 @@ import '../../i18n/i18n'
 
 const LanguageSelector = () => {
   const { t } = useTranslation()
+  const router = useRouter()
   const { dark } = useSelector((state: RootState) => state.themeState)
+
   const handleLanguage = (lang: string) => {
     lang && localStorage.setItem('lng', lang)
     window.location.reload()
@@ -29,17 +32,18 @@ const LanguageSelector = () => {
     ;(document.getElementById(`${id}`) as HTMLDivElement).style.background= dark ? themeStyles.backgroundDark : themeStyles.backgroundLight
   }
 
-  
-
   return (
       <div 
         className={styles.container}
-        style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}
+        style={{ 
+          backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.backgroundLight,
+          color: dark ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight
+        }}
         >
         <div 
           onMouseEnter={() => handleHover('item-flags-es')} 
           onMouseLeave={() => handleOffHover('item-flags-es')} 
-          style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}
+          style={{ backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.backgroundLight }}
           id="item-flags-es" 
           className={styles.flags} 
           onClick={() => handleLanguage('es')}
@@ -53,7 +57,7 @@ const LanguageSelector = () => {
           onClick={() => handleLanguage('en')} 
           onMouseEnter={() => handleHover('item-flags-en')} 
           onMouseLeave={() => handleOffHover('item-flags-en')} 
-          style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}
+          style={{ backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.backgroundLight }}
           >
           <Image width={30} height={30} src={Uk} alt='' />
           <p>{t('buttons.en')}</p>
@@ -64,7 +68,7 @@ const LanguageSelector = () => {
           onClick={() => handleLanguage('fr')}
           onMouseEnter={() => handleHover('item-flags-fr')} 
           onMouseLeave={() => handleOffHover('item-flags-fr')} 
-          style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}
+          style={{ backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.backgroundLight }}
           >
           <Image width={30} height={30} src={Fr} alt='' />
           <p>{t('buttons.fr')}</p>
@@ -75,7 +79,7 @@ const LanguageSelector = () => {
           onClick={() => handleLanguage('br')}
           onMouseEnter={() => handleHover('item-flags-br')} 
           onMouseLeave={() => handleOffHover('item-flags-br')} 
-          style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}
+          style={{ backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.backgroundLight }}
           >
           <Image width={30} height={30} src={Br} alt='' />
           <p>{t('buttons.br')}</p>

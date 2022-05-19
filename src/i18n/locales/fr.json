@@ -22,5 +22,12 @@
   },
   "loading": {
     "pending": "Mise en charge ..."
+  },
+  "links":{
+    "aboutMe": "Sur moi",
+    "contact": "Contacter",
+    "blog": "Blog",
+    "portfolio": "portefeuille",
+    "CV": "CV"
   }
 }

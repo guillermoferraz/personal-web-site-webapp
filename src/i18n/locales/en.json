@@ -22,5 +22,12 @@
   },
   "loading": {
     "pending": "Loading ..."
+  },
+  "links":{
+    "aboutMe": "About me",
+    "contact": "Contact",
+    "blog": "Blog",
+    "portfolio": "Portfolio",
+    "CV": "CV"
   }
 }

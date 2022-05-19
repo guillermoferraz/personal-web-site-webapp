@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../redux'
+import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 import Image from 'next/image'
 /* Flags */
@@ -23,10 +23,10 @@ import styles from './navbar.module.scss'
 import { themeStyles } from '../../styles/theme'
 
 /* Redux data */
-import { getTheme, changeTheme } from '../../redux/theme'
+import { getTheme, changeTheme } from '../../store/theme'
 
 /* Configs */
-import { ConstantThemes } from '../../redux/types/themeTypes'
+import { ConstantThemes } from '../../store/types/themeTypes'
 
 const Navbar = () => {
   const dispatch = useAppDispatch()
@@ -42,9 +42,11 @@ const Navbar = () => {
   }, [responseChangeTheme, dispatch, checked])
 
   useEffect(() => {
-    if (themeData && themeData === ConstantThemes.LIGTH) setChecked(false)
-    if (themeData && themeData === ConstantThemes.DARK) setChecked(true)
+    if (themeData && themeData === ConstantThemes.LIGTH) setChecked(true)
+    if (themeData && themeData === ConstantThemes.DARK) setChecked(false)
   }, [themeData])
+
+  console.log("THEME DATA:", themeData)
 
   useEffect(() => {
     const lng = typeof window !== 'undefined' && localStorage.getItem('lng')
@@ -67,40 +69,39 @@ const Navbar = () => {
 
   const handleChecked = (event: boolean) => {
     if (event) {
-      console.log("distach dark")
-      dispatch(changeTheme(ConstantThemes.DARK))
+      dispatch(changeTheme(ConstantThemes.LIGTH))
       setChecked(true)
     } else {
-      console.log("distach light")
-      dispatch(changeTheme(ConstantThemes.LIGTH))
+      dispatch(changeTheme(ConstantThemes.DARK))
       setChecked(false)
     }
   }
 
   return (
-    <nav className={styles.container} style={{ backgroundColor: checked ? themeStyles.primaryDark : themeStyles.primaryLight }}>
+    <nav className={styles.container} style={{ backgroundColor: !checked ? themeStyles.primaryDark : themeStyles.primaryLight }}>
       {openLanguages && (<div className={styles.backWall} onClick={() => setOpenLanguages(false)} />)}
       <div>
         <Logo />
       </div>
       <div className={styles.containerSwitch}>
-        <div className={styles.iconSun} >
-          <LightModeIcon />
-        </div>
-        <Switch {...label} checked={checked} onChange={(e) => handleChecked(e.target.checked)} />
         <div className={styles.iconMoon}>
           <ModeNightIcon />
         </div>
+        <Switch {...label} checked={checked} onChange={(e) => handleChecked(e.target.checked)} />
+        <div className={styles.iconSun} >
+          <LightModeIcon />
+        </div>
+
       </div>
       <div onClick={() => setOpenLanguages(!openLanguages)} className={styles.languageItem}>
         <div className={styles.flagSelected}>
           {flagSelected(languageSelected)}
         </div>
         {!openLanguages ? (
-          <ArrowDropDownIcon className={styles.arrow} style={{ color: checked ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }} />
+          <ArrowDropDownIcon className={styles.arrow} style={{ color: !checked ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }} />
         )
           :
-          (<ArrowDropUpIcon className={styles.arrow} style={{ color: checked ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }} />)}
+          (<ArrowDropUpIcon className={styles.arrow} style={{ color: !checked ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }} />)}
         {openLanguages && (
           <div className={styles.containerLanguages}>
             <LanguageSelector />

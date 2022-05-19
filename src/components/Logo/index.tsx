@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../redux'
+import { RootState } from '../../store'
 
 import styles from './logo.module.scss'
 import { themeStyles } from '../../styles/theme'
