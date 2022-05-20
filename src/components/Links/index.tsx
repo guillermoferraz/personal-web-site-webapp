@@ -8,8 +8,6 @@ import { getTheme } from '../../store/theme'
 import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 
-/* Types styles */
-import { StylesTypes } from '../../styles/StylesTypes'
 
 /* Styles */
 import { themeStyles } from '../../styles/theme'
@@ -38,6 +36,9 @@ const Links = () => {
       setActiveButtonsMobile(false)
     }
   }
+  useEffect(() => {
+    handleDetectSize()
+  },[])
 
   useEffect(() => {
     addEventListener('resize', handleDetectSize)
