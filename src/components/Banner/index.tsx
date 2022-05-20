@@ -1,16 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+/* constants / helpers */
 import MatrixEffect from '../MatrixEffect'
+import { constantsTypes } from '../../constants/constants';
+
+/* Styles */
 import styles from './banner.module.scss'
 
 const Banner = () => {
-  const [text, setText] = useState('GUILLERMO FERRAZ')
-  const [comment, setComment] = useState<string>('FullStack Developer')
+  const [text, setText] = useState(constantsTypes.TITLE_BANNER)
+  const [comment, setComment] = useState<string>(constantsTypes.SUB_TITLE_BANNER)
   const initialTime = 100;
   const addExtraTime = 100
 
   const randomText = (length: number) => {
     let result = '';
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+:"{?><';
+    const characters = constantsTypes.RANDOM_CHARACTERS;
     const charactersLength = characters.length;
     for (let i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() *
@@ -21,7 +26,6 @@ const Banner = () => {
 
 
   const handleEntryMouse = () => {
-    console.log("entry Mouse")
     setText(randomText(25))
     setTimeout(() => setText(randomText(30)), initialTime)
     setTimeout(() => setText(randomText(25)), initialTime + addExtraTime)
@@ -58,7 +62,7 @@ const Banner = () => {
     setTimeout(() => setText(randomText(20)), initialTime + addExtraTime *48)
     setTimeout(() => setText(randomText(20)), initialTime + addExtraTime *50)
     setTimeout(() => setText(randomText(20)), initialTime + addExtraTime *52)
-    setTimeout(() => setText('GUILLEMO FERRAZ'), initialTime + addExtraTime *54)
+    setTimeout(() => setText(constantsTypes.TITLE_BANNER), initialTime + addExtraTime *54)
     setTimeout(() => setComment('PHP'), initialTime + addExtraTime *3)
     setTimeout(() => setComment('Docker'), initialTime + addExtraTime *6)
     setTimeout(() => setComment('JavaScript'), initialTime + addExtraTime *9)
@@ -76,7 +80,7 @@ const Banner = () => {
     setTimeout(() => setComment('Docker'), initialTime + addExtraTime *45)
     setTimeout(() => setComment('TypeScript'), initialTime + addExtraTime *48)
     setTimeout(() => setComment('Ethical Hacking'), initialTime + addExtraTime *51)
-    setTimeout(() => setComment('FullStack Developer'), initialTime + addExtraTime *54)
+    setTimeout(() => setComment(constantsTypes.SUB_TITLE_BANNER), initialTime + addExtraTime *54)
   }
   const handleLeaveMouse = () => {
     console.log("Leave Mouse")

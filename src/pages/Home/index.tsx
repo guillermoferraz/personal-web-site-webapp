@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useRouter } from 'next/router'
 import { useSelector } from 'react-redux'
 import '../../i18n/i18n'
 
@@ -22,7 +21,6 @@ import { themeStyles } from '../../styles/theme'
 const Start = () => {
   const { t } = useTranslation()
   const dispatch = useAppDispatch()
-  const router = useRouter()
   const { dark } = useSelector((state: RootState) => state.themeState)
 
   useEffect(() => {

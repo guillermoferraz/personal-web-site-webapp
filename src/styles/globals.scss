@@ -16,3 +16,15 @@ a {
 * {
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f2f4f6;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #93a0ad;
+  border-radius: 238px;
+}
+::-webkit-scrollbar-track {
+  margin-bottom: 70px;
+}

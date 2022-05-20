@@ -64,6 +64,10 @@ const styles = makeStyles({
     margin: 'auto',
     display: 'flex',
     justifyContent: 'center',
+    ['@media (max-width: 599px)']:{
+      display: 'inline',
+      backgroundColor: 'orange !important',
+    }
   },
   containerItem: {
     margin: 9,
@@ -79,11 +83,14 @@ const styles = makeStyles({
       borderTop: `1px solid ${themeStyles.hoverTextLight}`,
       borderBottom: `1px solid ${themeStyles.hoverTextLight}`,
       color: themeStyles.hoverTextLight
+    },
+    ['@media (max-width: 599px)']:{
+      
     }
   },
   item: {
     padding: 0,
     margin: 0,
-  }
+  },
 })
 export default Links

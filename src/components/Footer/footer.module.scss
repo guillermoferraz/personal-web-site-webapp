@@ -1,7 +1,31 @@
 .container {
-  border: 1px solid red;
   position: absolute;
   width: 100vw;
   height: 7.5vh;
-  margin-top:0
+  display: flex;
+  margin-top:0;
+  box-shadow: 5px -8px 16px rgba(41, 156, 33, 0.709);
+  padding:0;
+  margin: 0;
+}
+.containerIcons{
+  height: max-content;
+  margin: auto;
+  text-align: center;
+  &>a{
+    margin-left: 10px;
+    margin-right: 10px;
+    &:hover{
+      cursor: pointer;
+      opacity: .75;
+    }
+  }
+}
+.containerText{
+  height: max-content;
+  &>p{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+  }
 }
