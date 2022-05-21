@@ -1,0 +1,36 @@
+.container{
+  min-height: 85vh;
+}
+.containerForm{
+  padding: 20px;
+  width: 35%;
+  margin: auto;
+  
+}
+.containerInput{
+  margin-top: 15px
+}
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.counter{
+  margin-top: 4px;
+  padding: 0;
+  text-align: right;
+  border-radius: 5px;
+  width: max-content;
+  margin-inline-start: auto;
+}
+@media (max-width: 799px){
+  .containerForm{
+    width: 70%;
+  }
+}
+@media (max-width: 599px){
+  .containerForm{
+    width: 100%;
+  }
+}

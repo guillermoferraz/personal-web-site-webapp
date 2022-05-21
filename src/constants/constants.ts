@@ -5,6 +5,20 @@ interface constantsTypes {
   RANDOM_CHARACTERS: string
   FOOTER_TEXT: string
 }
+interface EntryInputTypes {
+  EMAIL: string
+  NAME: string
+  COMPANY: string
+  MESSAGE: string
+
+}
+export const constantsEntryInput: EntryInputTypes = {
+  NAME:'NAME',
+  EMAIL: 'EMAIL',
+  COMPANY: 'COMPANY',
+  MESSAGE: 'MESSAGE'
+}
+
 export const constantsTypes: constantsTypes = {
   PENDING: 'PENDING',
   TITLE_BANNER: 'GUILLERMO FERRAZ',

@@ -82,15 +82,13 @@ const Banner = () => {
     setTimeout(() => setComment('Ethical Hacking'), initialTime + addExtraTime *51)
     setTimeout(() => setComment(constantsTypes.SUB_TITLE_BANNER), initialTime + addExtraTime *54)
   }
-  const handleLeaveMouse = () => {
-    console.log("Leave Mouse")
-  }
+  const handleLeaveMouse = () => {null}
 
   const returnText = () => {
     return (
-      <p className={styles.text}>
+      <span className={styles.text}>
         {text}
-      </p>
+      </span>
     )
   }
 

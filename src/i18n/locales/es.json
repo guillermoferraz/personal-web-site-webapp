@@ -15,7 +15,8 @@
     "exampleOne": "Ejemplo 1",
     "exampleTwo": "Ejemplo 2",
     "exampleThree": "Ejemplo 3",
-    "cleanState": "Limpiar Estado"
+    "cleanState": "Limpiar Estado",
+    "send": "Enviar"
   },
   "title":{
     "languageSelector": "Selector de idioma"
@@ -30,5 +31,12 @@
     "portfolio": "Portfólio",
     "CV": "CV",
     "home": "Inicio"
+  },
+  "labels":{
+    "email": "Correo electrónico",
+    "name": "Nombre",
+    "company": "Empresa",
+    "message": "Mensaje",
+    "optional": "Opcional"
   }
 }

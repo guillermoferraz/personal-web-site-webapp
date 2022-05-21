@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
+
 /* Flags */
 import Sp from '../../../public/flags/spain.svg'
 import Fr from '../../../public/flags/france.svg'
@@ -18,20 +21,25 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import HomeIcon from '@mui/icons-material/Home';
 import Switch from '@mui/material/Switch';
 import styles from './navbar.module.scss'
 import { themeStyles } from '../../styles/theme'
+
 
 /* Redux data */
 import { getTheme, changeTheme } from '../../store/theme'
 
 /* Configs */
 import { ConstantThemes } from '../../store/types/themeTypes'
+import '../../i18n/i18n'
 
 const Navbar = () => {
+  const router = useRouter()
   const dispatch = useAppDispatch()
+  const { t } = useTranslation()
   const { themeData, responseChangeTheme } = useSelector((state: RootState) => state.themeState)
-
+  const { dark } = useSelector((state: RootState) => state.themeState)
   const [openLanguages, setOpenLanguages] = useState<boolean>(false)
   const [languageSelected, setLanguageSelected] = useState<string>('')
   const [checked, setChecked] = useState<boolean>(false)
@@ -45,8 +53,6 @@ const Navbar = () => {
     if (themeData && themeData === ConstantThemes.LIGTH) setChecked(true)
     if (themeData && themeData === ConstantThemes.DARK) setChecked(false)
   }, [themeData])
-
-  console.log("THEME DATA:", themeData)
 
   useEffect(() => {
     const lng = typeof window !== 'undefined' && localStorage.getItem('lng')
@@ -83,6 +89,10 @@ const Navbar = () => {
       <div>
         <Logo />
       </div>
+      {router && router.route !== '/' && ( 
+      <div title={t('links.home')} className={styles.iconHome} style={{ color: dark ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight}}>
+        <HomeIcon onClick={() => router.push('/')}/>
+      </div>)}
       <div className={styles.containerSwitch}>
         <div className={styles.iconMoon}>
           <ModeNightIcon />

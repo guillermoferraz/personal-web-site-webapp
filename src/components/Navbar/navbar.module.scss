@@ -58,3 +58,13 @@
 .iconMoon{
   color: rgb(34, 32, 164)
 }
+.iconHome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  &:hover{
+    cursor: pointer;
+    opacity: .70;
+  }
+}
