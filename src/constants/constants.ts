@@ -25,4 +25,4 @@ export const constantsTypes: constantsTypes = {
   SUB_TITLE_BANNER: 'FullStack Developer',
   RANDOM_CHARACTERS: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+:"{?><',
   FOOTER_TEXT: 'Guillermo Ferraz Web © 2022'
-}
+} 

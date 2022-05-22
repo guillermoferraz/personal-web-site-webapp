@@ -13,7 +13,6 @@ import { getTheme } from '../../store/theme'
 import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 
-
 /* Styles */
 import styles from '../../styles/home.module.scss'
 import { themeStyles } from '../../styles/theme'
@@ -24,24 +23,33 @@ const Start = () => {
   const { dark } = useSelector((state: RootState) => state.themeState)
 
   useEffect(() => {
-    (
-      dispatch(getTheme())
-    )
+    dispatch(getTheme())
   }, [dispatch, dark])
 
   return (
-    <div className={styles.container} style={{ backgroundColor: dark ? themeStyles.backgroundDark : themeStyles.backgroundLight }}>
+    <div
+      className={styles.container}
+      style={{
+        backgroundColor: dark
+          ? themeStyles.backgroundDark
+          : themeStyles.backgroundLight,
+      }}
+    >
       <Banner />
       <div className={styles.content}>
         <MenuLeft />
         <div>
-          <Links/>
+          <Links />
           <div
             className={styles.textContainer}
             style={{
-              backgroundColor: dark ? themeStyles.cardBackgroundDark : themeStyles.cardBackgroundLight,
+              backgroundColor: dark
+                ? themeStyles.cardBackgroundDark
+                : themeStyles.cardBackgroundLight,
               boxShadow: themeStyles.cardShadow,
-              color: dark ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight
+              color: dark
+                ? themeStyles.textPrimaryDark
+                : themeStyles.textPrimaryLight,
             }}
           >
             <p>{t('info.text_1')}</p>
