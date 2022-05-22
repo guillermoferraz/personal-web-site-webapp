@@ -24,6 +24,19 @@
   width: max-content;
   margin-inline-start: auto;
 }
+.error{
+  color: red;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  &>span{
+    margin-right: 10px;
+    &>svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
 @media (max-width: 799px){
   .containerForm{
     width: 70%;
