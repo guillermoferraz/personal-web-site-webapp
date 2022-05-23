@@ -38,5 +38,16 @@
     "company": "Company",
     "message": "Message",
     "optional": "Optional"
+  },
+  "messages":{
+    "autoResponseModalSuccess": "Thank you very much for contacting us. I will be contacting you shortly through your email " 
+  },
+   "errors":{
+    "email": "The email entered is not valid",
+    "name": "The name entered is not valid",
+    "maxMessage": "You have exceeded the maximum number of characters allowed",
+    "entryMessage": "Please enter a message"
   }
+
+
 }

@@ -180,6 +180,16 @@ const Contact: NextPage = () => {
 
   const handleCleanSubmitMessage = () => {
     setSuccessSubmit(false)
+    setName('')
+    setEmail('')
+    setCompany('')
+    setMessage('')
+    setCharacterCounter(0)
+    setLimitedCharacter(false)
+    ;(document.getElementById('email-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('name-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('company-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('message-input') as HTMLInputElement).value = ''
   }
 
   const handleSubmit = () => {
@@ -196,7 +206,7 @@ const Contact: NextPage = () => {
         setShowErrors(false)
         RenderErrorStyles(constantsTypes.CLEAN, '')
         setSuccessSubmit(true)
-        setTimeout(handleCleanSubmitMessage, 4500)
+        setTimeout(handleCleanSubmitMessage, 5500)
         console.log('Submit data:', {
           email: email,
           name: name,
@@ -257,7 +267,7 @@ const Contact: NextPage = () => {
               <span>
                 <ErrorIcon />
               </span>
-              Email error
+              {t('errors.email')}
             </p>
           )}
           <div className={styles.containerInput} id="name-container">
@@ -277,7 +287,7 @@ const Contact: NextPage = () => {
               <span>
                 <ErrorIcon />
               </span>
-              El nombre ingresado no es valido
+              {t('errors.name')}
             </p>
           )}
           <div className={styles.containerInput}>
@@ -313,7 +323,7 @@ const Contact: NextPage = () => {
               <span>
                 <ErrorIcon />
               </span>
-              Has superado el maximo de carateres
+              {t('errors.maxMessage')}
             </p>
           )}
           {messageError && (
@@ -321,7 +331,7 @@ const Contact: NextPage = () => {
               <span>
                 <ErrorIcon />
               </span>
-              Porf favor ingrese un mensaje
+              {t('errors.entryMessage')}
             </p>
           )}
 
@@ -351,4 +361,3 @@ const Contact: NextPage = () => {
   )
 }
 export default Contact
-

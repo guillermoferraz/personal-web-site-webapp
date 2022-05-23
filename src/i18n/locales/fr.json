@@ -38,5 +38,16 @@
     "company": "Entreprise",
     "message": "Message",
     "optional": "Optionnel"
+  },
+    "messages":{
+    "autoResponseModalSuccess": "Merci beaucoup de nous avoir contactés. Je vous contacterai sous peu via votre email " 
+  },
+  "errors":{
+    "email": "L'email saisi n'est pas valide",
+    "name": "Le nom saisi n'est pas valide",
+    "maxMessage": "Vous avez dépassé le nombre maximum de caractères autorisés",
+    "entryMessage": "Veuillez entrer un message"
   }
+
+
 }

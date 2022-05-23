@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import Image from 'next/image'
 import '../../i18n/i18n'
 
 /*Components */
@@ -16,6 +17,7 @@ import { useAppDispatch } from '../../hooks'
 /* Styles */
 import styles from '../../styles/home.module.scss'
 import { themeStyles } from '../../styles/theme'
+import Photo from '../../../public/images/photo_edited.jpeg'
 
 const Start = () => {
   const { t } = useTranslation()
@@ -52,6 +54,10 @@ const Start = () => {
                 : themeStyles.textPrimaryLight,
             }}
           >
+            <div className={styles.containerAvatar}>
+              <Image src={Photo} alt="Guillermo Ferraz Profile Picture" />
+            </div>
+
             <p>{t('info.text_1')}</p>
             <p>{t('info.text_2')}</p>
           </div>

@@ -16,12 +16,26 @@
   transition: 0.5s ease !important;
   -moz-transition: 0.5s ease !important;
   -webkit-transition: 0.5s ease !important;
+  position: relative;
   &:hover{
     transform: scale(1.05);
       -moz-transform: scale(1.05);
       -webkit-transform: scale(1.05);
       -o-transform: scale(1.05);
       -ms-transform: scale(1.05);
+  }
+}
+.containerAvatar{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -26px;
+  left: -25px;
+  display: none;
+  &>span{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50%;
   }
 }
 @media (max-width: 599px){
@@ -39,5 +53,8 @@
     margin-top: 20px;
     text-align: center;
     padding: 10px;
+  }
+  .containerAvatar{
+    display: inline
   }
 }
