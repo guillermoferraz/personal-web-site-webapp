@@ -4,3 +4,4 @@ export interface ExampleDataTypes {
   description?: string
   image?: string
 }
+

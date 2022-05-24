@@ -20,21 +20,21 @@ export const postMailer = createAsyncThunk(
 const mailerSlice = createSlice({
   name: 'mailerState',
   initialState: {
-    responsePostMailer: ''
+    responsePostMailer: '',
   },
   reducers: {
-    setCleanResponseMailer: (state: any) => {
+    setCleanExampleData: (state: any) => {
       state.responsePostMailer = ''
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(postMailer.fulfilled, (state, { payload }) => {
+      .addCase(postMailer.fulfilled, (state, { payload }: any) => {
         state.responsePostMailer = payload
       })
       .addCase(postMailer.pending, (state) => {
         state.responsePostMailer = constantsTypes.PENDING
       })
+  },
 })
 export default mailerSlice
-

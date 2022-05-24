@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { NextPage } from 'next'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
+import { useAppDispatch } from '../../hooks'
 
 /* Store */
-import { RootState } from '../../store'
+import { RootState, AppDispatch } from '../../store'
+import { postMailer } from '../../store/mailer'
 
 /* Components */
 import Textfield from '../../components/Textfield'
@@ -28,7 +30,11 @@ import '../../i18n/i18n'
 
 const Contact: NextPage = () => {
   const { t } = useTranslation()
+  const dispatch: AppDispatch = useAppDispatch()
   const { dark } = useSelector((state: RootState) => state.themeState)
+  const { responsePostMailer } = useSelector(
+    (state: RootState) => state.mailerState
+  )
 
   const [email, setEmail] = useState<string>('')
   const [name, setName] = useState<string>('')
@@ -207,18 +213,22 @@ const Contact: NextPage = () => {
         RenderErrorStyles(constantsTypes.CLEAN, '')
         setSuccessSubmit(true)
         setTimeout(handleCleanSubmitMessage, 5500)
-        console.log('Submit data:', {
-          email: email,
-          name: name,
-          company: company,
-          message: message,
-        })
+        dispatch(
+          postMailer({
+            email: email,
+            name: name,
+            company: company,
+            message: message,
+          })
+        )
       }
       !message ? setMessageError(true) : setMessageError(false)
       !name ? setNameError(true) : setNameError(false)
       !email ? setEmailError(true) : setEmailError(false)
     }
   }
+
+  console.log('RESPONSE MAILER:', responsePostMailer)
 
   return (
     <React.Fragment>
