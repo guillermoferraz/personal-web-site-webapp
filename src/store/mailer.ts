@@ -23,7 +23,7 @@ const mailerSlice = createSlice({
     responsePostMailer: '',
   },
   reducers: {
-    setCleanExampleData: (state: any) => {
+    setCleanResponseMailer: (state: any) => {
       state.responsePostMailer = ''
     },
   },

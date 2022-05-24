@@ -6,7 +6,7 @@ import { useAppDispatch } from '../../hooks'
 
 /* Store */
 import { RootState, AppDispatch } from '../../store'
-import { postMailer } from '../../store/mailer'
+import mailerSlice, { postMailer } from '../../store/mailer'
 
 /* Components */
 import Textfield from '../../components/Textfield'
@@ -35,6 +35,7 @@ const Contact: NextPage = () => {
   const { responsePostMailer } = useSelector(
     (state: RootState) => state.mailerState
   )
+  const { setCleanResponseMailer } = mailerSlice.actions
 
   const [email, setEmail] = useState<string>('')
   const [name, setName] = useState<string>('')
@@ -228,19 +229,29 @@ const Contact: NextPage = () => {
     }
   }
 
-  console.log('RESPONSE MAILER:', responsePostMailer)
+  const cleanResponseMailer = () => {
+    dispatch(setCleanResponseMailer())
+  }
+
+  useEffect(() => {
+    if (responsePostMailer && responsePostMailer.response === 'SUCCESS') {
+      setTimeout(cleanResponseMailer, 3000)
+    }
+  }, [responsePostMailer])
 
   return (
     <React.Fragment>
-      {successSubmit && (
-        <SucessSubmitModal
-          data={{
-            name: name,
-            email: email,
-            company: company,
-          }}
-        />
-      )}
+      {successSubmit &&
+        responsePostMailer &&
+        responsePostMailer.response === 'SUCCESS' && (
+          <SucessSubmitModal
+            data={{
+              name: name,
+              email: email,
+              company: company,
+            }}
+          />
+        )}
       <div
         style={{
           backgroundColor: dark
