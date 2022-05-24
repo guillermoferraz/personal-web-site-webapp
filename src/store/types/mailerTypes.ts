@@ -3,4 +3,5 @@ export interface PostMailerTypes {
   email: string
   company?: string
   message: string
+  lng: string
 }

@@ -26,6 +26,7 @@ import styles from './contact.module.scss'
 /* Configs / constanst */
 import { constantsEntryInput, constantsTypes } from '../../constants/constants'
 import { checkEmail } from '../../constants/ExpReg'
+import { changeLanguage } from '../../config/changeLanguage'
 import '../../i18n/i18n'
 
 const Contact: NextPage = () => {
@@ -220,6 +221,7 @@ const Contact: NextPage = () => {
             name: name,
             company: company,
             message: message,
+            lng: changeLanguage(),
           })
         )
       }
