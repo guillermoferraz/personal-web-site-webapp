@@ -40,7 +40,8 @@
     "optional": "Optionnel"
   },
     "messages":{
-    "autoResponseModalSuccess": "Merci beaucoup de nous avoir contactés. Je vous contacterai sous peu via votre email " 
+    "autoResponseModalSuccess": "Merci beaucoup de nous avoir contactés. Je vous contacterai sous peu via votre email ",
+    "from": "depuis "
   },
   "errors":{
     "email": "L'email saisi n'est pas valide",

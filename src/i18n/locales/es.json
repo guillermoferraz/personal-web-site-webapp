@@ -40,7 +40,8 @@
     "optional": "Opcional"
   },
   "messages":{
-    "autoResponseModalSuccess": "Muchas gracias por contactarse. En breve me estaré contactando con usted a través de su correo electrónico: " 
+    "autoResponseModalSuccess": "Muchas gracias por contactarse. En breve me estaré contactando con usted a través de su correo electrónico: ",
+    "from": "de "
   },
   "errors":{
     "email": "El correo electrónico ingresado no es válido",

@@ -186,20 +186,6 @@ const Contact: NextPage = () => {
     }
   }
 
-  const handleCleanSubmitMessage = () => {
-    setSuccessSubmit(false)
-    setName('')
-    setEmail('')
-    setCompany('')
-    setMessage('')
-    setCharacterCounter(0)
-    setLimitedCharacter(false)
-    ;(document.getElementById('email-input') as HTMLInputElement).value = ''
-    ;(document.getElementById('name-input') as HTMLInputElement).value = ''
-    ;(document.getElementById('company-input') as HTMLInputElement).value = ''
-    ;(document.getElementById('message-input') as HTMLInputElement).value = ''
-  }
-
   const handleSubmit = () => {
     if (emailError || limitedCharacter || nameError || messageError) {
       setShowErrors(true)
@@ -214,14 +200,13 @@ const Contact: NextPage = () => {
         setShowErrors(false)
         RenderErrorStyles(constantsTypes.CLEAN, '')
         setSuccessSubmit(true)
-        setTimeout(handleCleanSubmitMessage, 5500)
         dispatch(
           postMailer({
             email: email,
             name: name,
             company: company,
             message: message,
-            lng: changeLanguage(),
+            lng: `${changeLanguage()}`,
           })
         )
       }
@@ -232,28 +217,41 @@ const Contact: NextPage = () => {
   }
 
   const cleanResponseMailer = () => {
+    setName('')
+    setEmail('')
+    setCompany('')
+    setMessage('')
+    setCharacterCounter(0)
+    setLimitedCharacter(false)
+    ;(document.getElementById('email-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('name-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('company-input') as HTMLInputElement).value = ''
+    ;(document.getElementById('message-input') as HTMLInputElement).value = ''
+
     dispatch(setCleanResponseMailer())
+    setSuccessSubmit(false)
   }
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (responsePostMailer && responsePostMailer.response === 'SUCCESS') {
-      setTimeout(cleanResponseMailer, 3000)
+      setTimeout(cleanResponseMailer, 5500)
     }
   }, [responsePostMailer])
+   */
 
   return (
     <React.Fragment>
-      {successSubmit &&
-        responsePostMailer &&
-        responsePostMailer.response === 'SUCCESS' && (
-          <SucessSubmitModal
-            data={{
-              name: name,
-              email: email,
-              company: company,
-            }}
-          />
-        )}
+      {successSubmit && (
+        <SucessSubmitModal
+          data={{
+            name: name,
+            email: email,
+            company: company,
+          }}
+          open={successSubmit}
+          setOpen={cleanResponseMailer}
+        />
+      )}
       <div
         style={{
           backgroundColor: dark

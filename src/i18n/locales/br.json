@@ -40,7 +40,8 @@
     "optional": "Opcional"
   },
    "messages":{
-    "autoResponseModalSuccess": "Muito obrigado por entrar em contato conosco. Estarei entrando em contato com você em breve através do seu e-mail " 
+    "autoResponseModalSuccess": "Muito obrigado por entrar em contato conosco. Estarei entrando em contato com você em breve através do seu e-mail ",
+    "from": "de "
   },
   "errors":{
     "email": "O e-mail inserido não é válido",
