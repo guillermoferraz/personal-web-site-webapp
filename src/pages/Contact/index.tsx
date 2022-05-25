@@ -12,6 +12,7 @@ import mailerSlice, { postMailer } from '../../store/mailer'
 import Textfield from '../../components/Textfield'
 import ButtonDefault from '../../components/ButtonDefault'
 import SucessSubmitModal from '../../components/SucessSubmitModal'
+import ParticlesBackground from '../../components/Particles'
 
 /* Styles */
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
@@ -241,6 +242,7 @@ const Contact: NextPage = () => {
 
   return (
     <React.Fragment>
+      <ParticlesBackground />
       {successSubmit && (
         <SucessSubmitModal
           data={{

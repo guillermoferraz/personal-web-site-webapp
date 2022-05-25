@@ -8,7 +8,6 @@ import { getTheme } from '../../store/theme'
 import { RootState } from '../../store'
 import { useAppDispatch } from '../../hooks'
 
-
 /* Styles */
 import { themeStyles } from '../../styles/theme'
 import { makeStyles } from '@mui/styles'
@@ -18,7 +17,7 @@ import '../../i18n/i18n'
 const Links = () => {
   const dispatch = useAppDispatch()
   const router = useRouter()
-  const { t }  = useTranslation()
+  const { t } = useTranslation()
   const { dark } = useSelector((state: RootState) => state.themeState)
   const classes = styles({ dark: dark })
 
@@ -27,10 +26,10 @@ const Links = () => {
   useEffect(() => {
     dispatch(getTheme())
     classes
-  },[classes, dispatch])
+  }, [classes, dispatch])
 
   const handleDetectSize = () => {
-    if(window.innerWidth < 600){
+    if (window.innerWidth < 600) {
       setActiveButtonsMobile(true)
     } else {
       setActiveButtonsMobile(false)
@@ -38,57 +37,89 @@ const Links = () => {
   }
   useEffect(() => {
     handleDetectSize()
-  },[])
+  }, [])
 
   useEffect(() => {
     addEventListener('resize', handleDetectSize)
-  },[])
-
+  }, [])
 
   return (
-    <div 
+    <div
       className={classes.container}
-      style={{ color: dark ? themeStyles.textPrimaryDark : themeStyles.textPrimaryLight }}
-      >
-      <div 
-        id='about-me-btn' className={classes.containerItem}
+      style={{
+        color: dark
+          ? themeStyles.textPrimaryDark
+          : themeStyles.textPrimaryLight,
+      }}
+    >
+      <div
+        id="about-me-btn"
+        className={classes.containerItem}
         onClick={() => router.push('/AboutMe')}
-        style={{ border: activeButtonsMobile ? dark ? `1px solid ${themeStyles.hoverLigth}` : `1px solid ${themeStyles.hoverDark}` : ''}}
-        >
-        <p className={classes.item}>
-            {t('links.aboutMe')}
-          </p>
+        style={{
+          border: activeButtonsMobile
+            ? dark
+              ? `1px solid ${themeStyles.hoverLigth}`
+              : `1px solid ${themeStyles.hoverDark}`
+            : '',
+        }}
+      >
+        <p className={classes.item}>{t('links.aboutMe')}</p>
       </div>
-      <div 
-        id='contact-btn' 
-        className={classes.containerItem} 
+      <div
+        id="contact-btn"
+        className={classes.containerItem}
         onClick={() => router.push('/Contact')}
-        style={{ border: activeButtonsMobile ? dark ? `1px solid ${themeStyles.hoverLigth}` : `1px solid ${themeStyles.hoverDark}` : ''}}
-        >
+        style={{
+          border: activeButtonsMobile
+            ? dark
+              ? `1px solid ${themeStyles.hoverLigth}`
+              : `1px solid ${themeStyles.hoverDark}`
+            : '',
+        }}
+      >
         <p className={classes.item}>{t('links.contact')}</p>
       </div>
-      <div 
-        id='blog-btn' 
-        className={classes.containerItem}  
+      <div
+        id="blog-btn"
+        className={classes.containerItem}
         onClick={() => router.push('/Blog')}
-        style={{ border: activeButtonsMobile ? dark ? `1px solid ${themeStyles.hoverLigth}` : `1px solid ${themeStyles.hoverDark}` : ''}}
-        >
+        style={{
+          border: activeButtonsMobile
+            ? dark
+              ? `1px solid ${themeStyles.hoverLigth}`
+              : `1px solid ${themeStyles.hoverDark}`
+            : '',
+        }}
+      >
         <p className={classes.item}>{t('links.blog')}</p>
       </div>
-      <div 
-        id='portfolio-btn' 
-        className={classes.containerItem} 
+      <div
+        id="portfolio-btn"
+        className={classes.containerItem}
         onClick={() => router.push('/Portfolio')}
-        style={{ border: activeButtonsMobile ? dark ? `1px solid ${themeStyles.hoverLigth}` : `1px solid ${themeStyles.hoverDark}` : ''}}
-        >
+        style={{
+          border: activeButtonsMobile
+            ? dark
+              ? `1px solid ${themeStyles.hoverLigth}`
+              : `1px solid ${themeStyles.hoverDark}`
+            : '',
+        }}
+      >
         <p className={classes.item}>{t('links.portfolio')}</p>
       </div>
-      <div 
-        id='cv-btn' 
-        className={classes.containerItem} 
+      <div
+        id="cv-btn"
+        className={classes.containerItem}
         onClick={() => router.push('/Cv')}
-        style={{ border: activeButtonsMobile ? dark ? `1px solid ${themeStyles.hoverLigth}` : `1px solid ${themeStyles.hoverDark}` : ''}}
-        >
+        style={{
+          border: activeButtonsMobile
+            ? dark
+              ? `1px solid ${themeStyles.hoverLigth}`
+              : `1px solid ${themeStyles.hoverDark}`
+            : '',
+        }}
+      >
         <p className={classes.item}>{t('links.CV')}</p>
       </div>
     </div>
@@ -99,10 +130,12 @@ const styles = makeStyles({
     width: '90%',
     margin: 'auto',
     display: 'flex',
+    position: 'relative',
+    zIndex: 1,
     justifyContent: 'center',
-    ['@media (max-width: 599px)']:{
+    ['@media (max-width: 599px)']: {
       display: 'inline',
-    }
+    },
   },
   containerItem: {
     margin: 9,
@@ -110,18 +143,16 @@ const styles = makeStyles({
     fontSize: 14,
     textAlign: 'center',
     fontWeight: 500,
-    '&:hover':{
+    '&:hover': {
       margin: 8,
       padding: 13,
       cursor: 'pointer',
-      opacity: .70,
+      opacity: 0.7,
       borderTop: `1px solid ${themeStyles.hoverTextLight}`,
       borderBottom: `1px solid ${themeStyles.hoverTextLight}`,
-      color: themeStyles.hoverTextLight
+      color: themeStyles.hoverTextLight,
     },
-    ['@media (max-width: 599px)']:{
-      
-    }
+    ['@media (max-width: 599px)']: {},
   },
   item: {
     padding: 0,
@@ -129,3 +160,4 @@ const styles = makeStyles({
   },
 })
 export default Links
+

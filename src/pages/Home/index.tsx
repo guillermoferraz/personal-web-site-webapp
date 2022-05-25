@@ -8,6 +8,7 @@ import '../../i18n/i18n'
 import Banner from '../../components/Banner'
 import MenuLeft from '../../components/MenuLeft'
 import Links from '../../components/Links'
+import ParticlesBackground from '../../components/Particles'
 
 /* Store */
 import { getTheme } from '../../store/theme'
@@ -38,6 +39,7 @@ const Start = () => {
       }}
     >
       <Banner />
+      <ParticlesBackground />
       <div className={styles.content}>
         <MenuLeft />
         <div>
