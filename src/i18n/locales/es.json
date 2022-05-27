@@ -48,5 +48,19 @@
     "name": "El nombre ingresado no es válido",
     "maxMessage": "Has superado el máximo de caracteres permitidos",
     "entryMessage": "Por favor ingrese un mensaje"
-  }
+  },
+ "review":{
+   "p1":"Hola !!. Mi nombre es Guillermo Ferraz y vivo en Uruguay. ",
+   "p2":"Mi pasión desde muy pequeño ha sido y sigue siendo la informática. Así que lo que comenzó como un juego o una curiosidad de ver como funciona un computador, o investigar que tiene dentro , como trabaja o que es lo que hace que este funcione , hizo que cada vez mi atracción por esta rama fuera a mas y  mas . ",
+   "p3": "Gracias a eso pude encontrar mi vocación y hoy en día ser una persona que trabaja en lo que realmente quiere trabajar!. ",
+   "p4": "Hoy en día trabajo como desarrollador de Software y puedo vivir de ello. De todos modos me mantengo en constante aprendizaje y formación, ya que ademas de ser sumamente necesario para nuestro crecimiento profesional también es necesario para resolver los problemas de código a lo que nos enfrentamos día a día.",
+   "p5":"Trabajar como desarrollador de Software no es tan sencillo , ya que suele ser  por momentos un tanto agotador o frustrante , estar resolviendo problema tras problema , pero también es satisfactorio cuando generamos las soluciones a esos problemas y aprendemos a hacerlo. En lo personal me gusta mucho mi trabajo y pienso continuar mejorando y creciendo profesionalmente.",
+   "p6": "Mi enfoque principal es el desarrollo de aplicaciones web , desktop o mobile y mi “hobbie” es la seguridad informática.Este “hobbie” , me ha ayudado mucho o ver puntos vulnerables dentro de las propias aplicaciones que desarrollo , así que adquirir ese conocimiento me sido bastante útil para disminuir estos puntos vulnerables lo mayor posible.",
+   "p7":"Esta breve reseña sobre mi , la estoy escribiendo el día 26 de mayo del año 2022. Hago referencia a esta fecha para contarles lo siguiente.Casi siempre tenemos un lenguaje de programación el cual es nuestro “fuerte” por decirlo de algún modo o nos destacamos mas que con el resto. En mi caso este lenguaje es JavaScript y el entorno o   herramientas que podemos encontrar en el contexto de JavaScript.  En lo personal hoy en día siempre que voy a desarrollar una aplicación desde cero utilizo TypeScript y cuando surge una reunión con mis colegas para debatir acerca de como vamos a realizar un proyecto o cuales serian las mejores opciones que tenemos en relación a los requerimientos del proyecto , por lo general recomiendo a TypeScript. Consideremos que si es un proyecto muy pequeñito no seria muy necesario utilizar TypeScript pero si el proyecto tendrá un tamaño medio a grande y pienso que dentro de unos cuantos meses sacaremos una nueva versión y tendremos que escalarlo , pues en lo personal no cabe duda que mi respuesta sera TypeScript.Asi que puedo decir que a la fecha este seria el lenguaje en donde tengo mas experiencia y destaco por sobre el resto. En mi CV podre ponerlos en conocimiento del resto de lenguajes que he utilizado , pero ya de antemano aquí les cuento que este es mi fuerte tanto para desarrollar aplicaciones del lado del Backend como en el Frontend.",
+   "p8":"Los invito a echarle un vistoso o descargar mi CV dando click en el siguiente",
+   "link":" enlace",
+   "continueP8": "o dirigiéndose a la sección CV.",
+   "p9":"En esta web no solo tiene como finalidad mostrar y dar a conocer mis habilidades y mi experiencia sino que también la idea es tener un sitio propio donde pueda compartir mis conocimientos con otros desarrolladores o con personas que quieran comenzar en el mundo del desarrollo de software, por lo que periódicamente estaré compartiendo fragmentos de código , soluciones y otros ejemplos que espero sean de utilidad."
+ }
+
 }

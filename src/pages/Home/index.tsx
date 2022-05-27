@@ -9,6 +9,7 @@ import Banner from '../../components/Banner'
 import MenuLeft from '../../components/MenuLeft'
 import Links from '../../components/Links'
 import ParticlesBackground from '../../components/Particles'
+import BackWall from '../../components/BackWall'
 
 /* Store */
 import { getTheme } from '../../store/theme'
@@ -39,7 +40,7 @@ const Start = () => {
       }}
     >
       <Banner />
-      <ParticlesBackground />
+      <BackWall />
       <div className={styles.content}>
         <MenuLeft />
         <div>

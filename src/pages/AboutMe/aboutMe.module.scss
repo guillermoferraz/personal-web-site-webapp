@@ -1,0 +1,27 @@
+.container{
+	min-height: 85vh;
+	padding-top: 35px;
+	padding-bottom: 50px;
+}
+.content{
+	width: 70%;
+	margin: auto;
+	padding: 30px;
+	overflow-x: auto;
+	position: relative;
+	font-size: 18px;
+}
+.link{
+	color: #3d43ff;
+	&:hover{
+		opacity: .75;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+}
+@media (max-width: 599px){
+	.content{
+		width: 85%;
+		font-size: 16px;
+	}
+}

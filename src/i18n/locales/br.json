@@ -48,6 +48,19 @@
     "name": "O nome inserido não é válido",
     "maxMessage": "Você excedeu o número máximo de caracteres permitido",
     "entryMessage": "Por favor, digite uma mensagem"
+  },
+  "review":{
+    "p1":"Olá!!. Meu nome é Guillermo Ferraz e moro no Uruguai.",
+    "p2":"Minha paixão desde muito jovem foi e continua sendo a computação. Então, o que começou como um jogo ou uma curiosidade para ver como um computador funciona, ou investigar o que ele tem dentro, como funciona ou faz funcionar, foi cada vez mais a minha atração por este ramo.",
+    "p3": "Graças a isso pude encontrar minha vocação e hoje ser uma pessoa que trabalha naquilo que realmente quer trabalhar!",
+    "p4": "Hoje trabalho como desenvolvedor de software e posso viver disso. De qualquer forma, me mantenho em constante aprendizado e treinamento, pois além de ser extremamente necessário para nosso crescimento profissional, também é necessário resolver os problemas de código que enfrentamos todos os dias.",
+    "p5":"Trabalhar como desenvolvedor de software não é tão simples, pois costuma ser um pouco cansativo ou frustrante às vezes, resolver problema após problema, mas também é satisfatório quando geramos soluções para esses problemas e aprendemos a fazê-lo. Pessoalmente, gosto muito do meu trabalho e pretendo continuar melhorando e crescendo profissionalmente.",
+    "p6": "Meu foco principal é o desenvolvimento de aplicativos web, desktop ou mobile e meu 'hobby' é segurança de computadores. Esse 'hobby' tem me ajudado muito a ver pontos vulneráveis ​​dentro dos aplicativos que desenvolvo, então adquirir esse conhecimento tem sido bastante útil para reduzir ao máximo esses pontos vulneráveis.",
+    "p7":"Estou escrevendo esta breve resenha sobre mim em 26 de maio de 2022. Refiro-me a essa data para dizer o seguinte. Quase sempre temos uma linguagem de programação que é nossa 'forte', por assim dizer, ou nos destacamos mais do que o resto.No meu caso essa linguagem é JavaScript e o ambiente ou ferramentas que podemos encontrar no contexto de JavaScript.Pessoalmente, hoje sempre que vou desenvolver uma aplicação do zero eu uso TypeScript e quando uma reunião com meus colegas surge para discutir como vamos realizar um projeto ou quais seriam as melhores opções que temos em relação aos requisitos do projeto, geralmente recomendo o TypeScript. Acho que em alguns meses lançaremos uma nova versão e teremos que escalá-la, porque pessoalmente não há dúvida de que minha resposta será TypeScript. s seria o idioma em que tenho mais experiência e me destaco acima do resto. No meu CV poderei informar-vos das restantes linguagens que já utilizei, mas de antemão digo-vos aqui que esta é a minha força tanto para desenvolver aplicações no lado Backend como no Frontend.",
+    "p8":"Convido você a dar uma olhada ou baixar meu CV clicando no",
+    "link":"ligação",
+    "continueP8": "ou indo para a seção CV.",
+    "p9":"O objetivo deste site não é apenas mostrar e divulgar minhas habilidades e minha experiência, mas também a ideia é ter meu próprio site onde eu possa compartilhar meu conhecimento com outros desenvolvedores ou com pessoas que desejam iniciar no o mundo do desenvolvimento de software. Então, periodicamente, estarei compartilhando trechos de código, soluções e outros exemplos que espero que sejam úteis."
   }
 
 

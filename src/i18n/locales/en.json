@@ -48,7 +48,19 @@
     "name": "The name entered is not valid",
     "maxMessage": "You have exceeded the maximum number of characters allowed",
     "entryMessage": "Please enter a message"
+  },
+  "review":{
+    "p1":"Hello !!. My name is Guillermo Ferraz and I live in Uruguay. ",
+    "p2":"My passion from a very young age has been and continues to be computing. So what began as a game or a curiosity to see how a computer works, or to investigate what it has inside, how it works or what makes it work, became that each time my attraction to this branch was more and more.",
+    "p3": "Thanks to that I was able to find my vocation and today to be a person who works in what he really wants to work!",
+    "p4": "Today I work as a Software developer and I can live from it. In any case, I keep myself in constant learning and training, since in addition to being extremely necessary for our professional growth, it is also necessary to solve the code problems that we face every day.",
+    "p5":"Working as a Software developer is not that simple, since it is usually somewhat exhausting or frustrating at times, solving problem after problem, but it is also satisfying when we generate solutions to those problems and learn how to do it. Personally, I really like my job and I plan to continue improving and growing professionally.",
+    "p6": "My main focus is the development of web, desktop or mobile applications and my 'hobby' is computer security.This 'hobby' has helped me a lot to see vulnerable points within the applications I develop, so acquiring this knowledge has been quite useful to reduce these vulnerable points as much as possible.",
+    "p7":"I am writing this brief review about myself on May 26, 2022. I refer to this date to tell you the following.We almost always have a programming language which is our 'strong' so to speak or we stand out more than the rest. In my case this language is JavaScript and the environment or tools that we can find in the context of JavaScript. Personally, today whenever I am going to develop an application from scratch I use TypeScript and when a meeting with my colleagues arises to discuss how we are going to carry out a project or what would be the best options we have in relation to the requirements of the project , I generally recommend TypeScript. Let's consider that if it is a very small project it would not be necessary to use TypeScript but if the project will have a medium to large size and I think that in a few months we will release a new version and we will have to scale it, because personally there is no doubt that my response will be TypeScript.So I can say that to date this would be the language in which I have the most experience and I stand out above the rest. In my CV I will be able to inform you of the rest of the languages that I have used, but beforehand I will tell you here that this is my strength both for developing applications on the Backend side and on the Frontend.",
+    "p8":"I invite you to take a look or download my CV by clicking the",
+    "link":" link",
+    "continueP8": "or going to the CV section.",
+    "p9":"The purpose of this website is not only to show and publicize my skills and my experience, but also the idea is to have my own site where I can share my knowledge with other developers or with people who want to start in the world of software development. so periodically I will be sharing code snippets, solutions and other examples that I hope will be useful."
   }
-
 
 }
