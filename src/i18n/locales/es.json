@@ -61,6 +61,15 @@
    "link":" enlace",
    "continueP8": "o dirigiéndose a la sección CV.",
    "p9":"En esta web no solo tiene como finalidad mostrar y dar a conocer mis habilidades y mi experiencia sino que también la idea es tener un sitio propio donde pueda compartir mis conocimientos con otros desarrolladores o con personas que quieran comenzar en el mundo del desarrollo de software, por lo que periódicamente estaré compartiendo fragmentos de código , soluciones y otros ejemplos que espero sean de utilidad."
+ },
+ "cv":{
+   "nameAndSurname": "Nombre y apellido",
+   "phone": "Telefono",
+   "email": "Correo electrónico",
+   "position": "Posición",
+   "skills": "Habilidades",
+   "experience": "Experiencia",
+   "knowledge": "Conocimientos"
  }
 
 }

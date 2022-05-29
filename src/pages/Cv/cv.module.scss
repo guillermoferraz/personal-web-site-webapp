@@ -1,0 +1,111 @@
+.container {
+  min-height: 85vh;
+  padding: 15px;
+  display: flex;
+  p {
+    margin: 0;
+  }
+}
+.headerSeactionMobile{
+  display: none;
+}
+.containerImg {
+  width: max-content;
+  border: 1px solid #b5bfbf !important;
+  padding: 5px;
+  border-radius: 10px;
+  & > span {
+    border-radius: 10px !important;
+  }
+}
+.containerCV {
+  border: 1px solid #b5bfbf;
+  height: max-content;
+  padding: 20px;
+  margin: 80px 15px 0px 15px;
+  border-radius: 10px;
+}
+.containerSkills {
+  margin-top: 15px;
+  border: 1px solid #b5bfbf !important;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+.itemSkills {
+  padding: 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #b5bfbf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+  &:hover {
+    color: #3d43ff;
+    cursor: pointer;
+    background-color: #bed8c3;
+  }
+  & > span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    & > svg {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+  }
+}
+.imgMobile{
+  display: none;
+}
+.textIndicator{
+  font-weight: 500;
+}
+.textDescriptive{
+  font-weight: 400;
+}
+@media (max-width: 599px){
+	.container{
+		display: flow-root;
+    margin: auto;
+    min-width: 342px;
+	}
+  .containerImg {
+    border: 1px solid #b5bfbf !important;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 98%;
+    margin: 5px;
+    & > span {
+      border-radius: 10px !important;
+      width: 80px !important;
+      height: 80px !important;
+      display: none !important;
+    }
+  }
+  .containerCV{
+    margin: 20px 15px 0px 15px;
+  }
+  .headerSection{
+    display: none;
+  }
+  .headerSeactionMobile{
+    display: table;
+    font-size: 14px;
+    width: 55%;
+    padding: 5px;
+  }
+  .imgMobile{
+    display: inline;
+    &>span{
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50% !important;
+      border: 1px solid #b5bfbf !important;
+    }
+  }
+}
+

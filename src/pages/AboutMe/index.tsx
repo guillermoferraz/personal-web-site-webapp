@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next'
 import BackWall from '../../components/BackWall'
 
 /* styles */
-import { themeStyles } from '../../styles/theme.ts'
+import { themeStyles } from '../../styles/theme'
 import styles from './aboutMe.module.scss'
 
 /* Configs */
@@ -50,7 +50,7 @@ const AboutMe: NextPage = () => {
           <p>{t('review.p7')}</p>
           <p>
             {t('review.p8')}
-            <span className={styles.link}>{t('review.link')}</span>{' '}
+            <span onClick={() => router.push('/Cv')} className={styles.link}>{t('review.link')}</span>{' '}
             {t('review.continueP8')}
             <p>{t('review.p9')}</p>
           </p>
